@@ -1,0 +1,8 @@
+file_format: "1"
+id: forbidden_advantage
+name: FORBIDDEN_ADVANTAGE
+type: shield
+url: https://kbd.dailycraft.jp/bat43/
+requires: [pro_micro]
+features:
+  - keys

@@ -1,0 +1,2 @@
+config SHIELD_FORBIDDEN_ADVANTAGE
+    def_bool $(shields_list_contains,forbidden_advantage)

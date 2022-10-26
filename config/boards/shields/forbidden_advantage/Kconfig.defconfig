@@ -1,0 +1,6 @@
+if SHIELD_FORBIDDEN_ADVANTAGE
+
+config ZMK_KEYBOARD_NAME
+    default "Forbidden Advantage"
+
+endif

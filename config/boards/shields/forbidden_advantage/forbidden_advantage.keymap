@@ -1,0 +1,76 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEFAULT 0
+#define SYM   1
+#define NAV   2
+#define NAVSYM   3
+#define ___  &none
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+
+               &kp W       &kp F       &kp P       &kp B        &kp J       &kp L      &kp U       &kp Y
+    &kp A      &kp R       &kp S       &kp T       &kp G        &kp M       &kp N      &kp E       &kp I      &kp O
+    &kp Z      &kp X       &kp C       &kp D       &kp V        &kp K       &kp H      &kp COMMA   &kp DOT    &kp SLASH
+    ___        ___         ___         &kp Q                                &kp SEMI   ___         ___        ___
+
+                           ___         &sk LCTRL                            &kp F5     ___
+                                       &sk LC(LSHFT)                        &kp F10
+               &mo NAV     &kp LSHFT   ___                                  &kp F11    &kp SPACE   &mo SYM
+
+            >;
+        };
+
+
+        SYM {
+            bindings = <
+
+               &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE    &kp CARET   &kp RPAR   &kp RBRC    &kp RBKT
+    &kp MINUS  &kp STAR    &kp EQUAL   &kp UNDER   &kp DLLR     &kp HASH    &sk LGUI   &sk LALT    &sk RCTRL  &sk RSHFT
+    &kp PLUS   &kp PIPE    &kp AT      &kp BSLH    &kp PRCNT    &kp GRAVE   &kp AMPS   &kp SQT     &kp APOS   &kp SLASH
+    ___        ___         ___         &sk RALT                             &kp ESC    ___         ___        ___
+
+                           &kp DEL     ___                                  ___        ___
+                                       ___                                  ___
+               &mo NAVSYM  &kp RET     ___                                  ___        ___         ___
+
+            >;
+        };
+
+
+        NAV {
+            bindings = <
+
+               ___         ___         ___         &kp K_VOL_UP &kp PG_UP   &kp HOME   &kp UP      &kp END
+    &sk LSHFT  &sk LCTRL   &sk LALT    &sk LGUI    &kp K_VOL_DN &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT  ___
+    ___        ___         ___         ___         ___          ___         &kp INS    &kp TAB     ___        ___
+    ___        ___         ___         ___                                  ___        ___         ___        ___
+
+                           ___         ___                                  ___        &kp DEL
+                                       ___                                  ___
+               ___         ___         ___                                  ___        &kp BSPC    &mo NAVSYM
+
+            >;
+        };
+
+
+        NAVSYM {
+            bindings = <
+               &kp N5      &kp N3      &kp N1      &kp N9       &kp N8      &kp N0     &kp N2      &kp N4
+    &sk LSHFT  &sk LCTRL   &sk LALT    &sk LGUI    &kp N7       &kp N6      &sk LGUI   &sk RALT    &sk RCTRL  &sk RSHFT
+    &kp F7     &kp F5      &kp F3      &kp F1      &kp F9       &kp F8      &kp F10    &kp F2      &kp F4     &kp F6
+    ___        ___         ___         &kp F11                              &kp F12    ___         ___        ___
+
+                           ___         ___                                  ___        ___
+                                       ___                                  ___
+               ___         ___         ___                                  ___        ___     ___
+
+            >;
+        };
+    };
+};
