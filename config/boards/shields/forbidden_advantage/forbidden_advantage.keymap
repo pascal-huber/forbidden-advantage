@@ -32,7 +32,7 @@
 
                &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE    &kp CARET   &kp RPAR   &kp RBRC    &kp RBKT
     &kp MINUS  &kp STAR    &kp EQUAL   &kp UNDER   &kp DLLR     &kp HASH    &sk LGUI   &sk LALT    &sk RCTRL  &sk RSHFT
-    &kp PLUS   &kp PIPE    &kp AT      &kp BSLH    &kp PRCNT    &kp GRAVE   &kp AMPS   &kp SQT     &kp APOS   &kp SLASH
+    &kp PLUS   &kp PIPE    &kp AT      &kp BSLH    &kp PRCNT    &kp GRAVE   &kp AMPS   &kp SQT     &kp DQT    &kp EXCL
     ___        ___         ___         &sk RALT                             &kp ESC    ___         ___        ___
 
                            &kp DEL     ___                                  ___        ___
