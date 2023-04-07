@@ -6,13 +6,16 @@ microcontroller.
 
 ## Building
 
-The Elite-Pi is compatible with the Sparkfun Pro Micro RP2040. To locally build it:
+The Elite-Pi is compatible with the Sparkfun Pro Micro RP2040. To locally build
+it:
 
 ``` sh
 west build -s zmk/app -b sparkfun_pro_micro_rp2040 -- -DZMK_CONFIG=/home/pascal/git/forbidden-advantage/config/ -DSHIELD="forbidden_advantage"
 ```
 
-Put the elite-pi into bootloader, mount it and cp then copy the uf2 file
+## Flashing
+
+Put the elite-pi into bootloader, mount it and copy the uf1 file
 (`build/zephyr/zmk.uf2`) onto it.
 
 ## Ideas
