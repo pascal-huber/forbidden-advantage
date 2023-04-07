@@ -19,8 +19,6 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: firmware
-      - name: Display structure of downloaded files
-        run: ls -R
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
