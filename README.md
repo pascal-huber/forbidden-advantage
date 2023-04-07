@@ -1,6 +1,8 @@
 # Forbidden Advantage
 
-ZMK config for my hand-wired kinesis advantage 2 using a subset of the keys.
+ZMK config for [my hand-wired Kinesis Advantage 2 using a subset of the
+keys](https://resolved.ch/projects/forbidden_advantage.html) and a RP2040
+microcontroller. 
 
 ## Building
 
