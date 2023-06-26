@@ -4,16 +4,17 @@ KEY_WIDTH = 48
 KEY_HEIGHT = 48
 KEY_PADDING = 2
 KEY_SPACING=10
-LINE_SPACING = 15
+LINE_SPACING = 18
 BOARD_SPACING = 2
 KEY_RADIUS = 2
 
 
 STYLE = """
     svg {
-        font-family: monospace;
-        font-size: 16px;
+        font-family: "Iosevka Term Slab", monospace;
+        font-size: 22px;
         font-kerning: normal;
+        font-weight: bold;
         text-rendering: optimizeLegibility;
         fill: #24292e;
     }
@@ -21,6 +22,10 @@ STYLE = """
     rect {
         fill: #f6f8fa;
         stroke: #333;
+    }
+
+    .combo {
+        font-size: 20px;
     }
 
     .key {
@@ -36,8 +41,9 @@ STYLE = """
     }
 
     .disabled {
-        fill: #888;
-        stroke: #f0009;
+        fill: #f6f8fa;
+        stroke: #ccc;
+        border-color: red;
     }
 
     .deactivated {
@@ -108,7 +114,7 @@ KEYMAP = [
         "rows": [
             [___,  ";", ":", "q", "ö", ___, "page up", "home", "↑", "end", ___           ],
             [sk("SHFT"),  sk("CTRL"), sk("ALT"), sk("MOD"), "ä", ___, "page down", "←", "↓", "→", _u_ ],
-            [sk("ALTGR"),  _u_, _u_, "ESC", "ü", ___, "DEL", "INS", "TAB", _u_, _u_ ],
+            [sk("ALT GR"),  _u_, _u_, "ESC", "ü", ___, "DEL", "INS", "TAB", "C-g", _u_ ],
             [___,  ___, ___,  _u_, _u_, ___,                 "vol up", _u_,  ___, ___, ___,  ],
             [___,  ___, p("NAV", True), _u2_,  _u_, ___, "vol down", n("RET", True), n("SYM", True), ___, ___, ],
             [___,  ___, ___, ___, _u_, ___,                 _u_, ___, ___, ___, ___, ]
@@ -182,11 +188,11 @@ def print_combo(row, col, key):
     key_h = KEY_HEIGHT * key_fract_y
     key_w = KEY_WIDTH * key_fract_x
     key_class = "combo"
-    content += f'<rect rx="{8}" ry="{8}" x="{x}" y="{y}" width="{key_w}" height="{key_h}" class="{key_class} key" />'
+    content += f'<rect rx="{4}" ry="{4}" x="{x}" y="{y}" width="{key_w}" height="{key_h}" class="{key_class} key" />'
     x +=  (KEY_WIDTH*key_fract_x/2)
     y +=  KEY_PADDING + (1.0-key_fract_y)*KEY_HEIGHT / 3
     for word in key.split():
-        content += f'<text text-anchor="middle" dominant-baseline="middle" x="{x}" y="{y}" class="">'
+        content += f'<text text-anchor="middle" dominant-baseline="middle" x="{x}" y="{y}" class="combo">'
         content += word
         content += '</text>'
         y += LINE_SPACING

@@ -69,7 +69,7 @@
 
                &kp SEMI    &kp COLON   &kp Q       &kp RA(P)    &kp PG_UP   &kp HOME   &kp UP      &kp END
     &sk LSHFT  &sk LCTRL   &sk LALT    &sk LGUI    &kp RA(Q)    &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT  ___
-    &sk RALT   ___         ___         &kp ESC     &kp RA(Y)    ___         &kp INS    &kp TAB     ___        ___
+    &sk RALT   ___         ___         &kp ESC     &kp RA(Y)    &kp DEL     &kp INS    &kp TAB     &kp LC(G)  ___
     ___        ___         ___         ___                                  ___        ___         ___        ___
 
                            ___         ___                                  &kp K_VOL_UP   ___

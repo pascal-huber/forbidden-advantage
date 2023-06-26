@@ -1,8 +1,9 @@
 <svg width="632" height="342" viewBox="0 0 632 342" xmlns="http://www.w3.org/2000/svg"><style>
     svg {
-        font-family: monospace;
-        font-size: 16px;
+        font-family: "Iosevka Term Slab", monospace;
+        font-size: 22px;
         font-kerning: normal;
+        font-weight: bold;
         text-rendering: optimizeLegibility;
         fill: #24292e;
     }
@@ -10,6 +11,10 @@
     rect {
         fill: #f6f8fa;
         stroke: #333;
+    }
+
+    .combo {
+        font-size: 20px;
     }
 
     .key {
@@ -25,8 +30,9 @@
     }
 
     .disabled {
-        fill: #888;
-        stroke: #f0009;
+        fill: #f6f8fa;
+        stroke: #ccc;
+        border-color: red;
     }
 
     .deactivated {
